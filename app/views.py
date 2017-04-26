@@ -2,6 +2,7 @@ from flask import Flask
 from watson_developer_cloud import VisualRecognitionV3 as vr
 from app import app
 from flask import render_template, request
+import os
 
 app = Flask(__name__)
 
