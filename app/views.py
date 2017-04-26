@@ -1,8 +1,7 @@
 from watson_developer_cloud import VisualRecognitionV3 as vr
 from app import app
-from flask import Flask, render_template, request
+from flask import render_template, request
 
-app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -11,7 +10,3 @@ def index():
 		img = instance.classify(images_url=request.form['search']) # Identify Image  
 		return render_template('result.html', img=img) # Renders template with Image results
 	return render_template('index.html')
-
-
-if __name__ == '__main__':
-	app.run()
