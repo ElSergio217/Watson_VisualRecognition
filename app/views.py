@@ -13,3 +13,10 @@ def index():
 		return render_template('result.html', img=img) # Renders template with Image results
 	return render_template('index.html')
 
+
+if __name__ == '__main__':
+	port = int(os.environ.get('PORT', 5000))
+
+	if port == 5000:
+		app.debug = True
+	app.run(host='0.0.0.0', port=port)
