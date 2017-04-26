@@ -1,6 +1,9 @@
+from flask import Flask
 from watson_developer_cloud import VisualRecognitionV3 as vr
 from app import app
 from flask import render_template, request
+
+app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
