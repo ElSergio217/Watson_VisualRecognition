@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="container text-center">
+		<img width="50%" src="{{img['images'][0]['source_url']}}">
+		<div class="row">
+			<div class="col-md-4">
+				<b>Score</b>
+				<p>{{img["images"][0]["classifiers"][0]["classes"][0]["score"]}}</p>
+			</div>
+			<div class="col-md-4">
+				<b>Class</b>
+				<p>{{img["images"][0]["classifiers"][0]["classes"][0]["class"]}}</p>
+			</div>
+			<div class="col-md-4">
+				<b>Hierarchy type</b>
+				<p>{{img["images"][0]["classifiers"][0]["classes"][0]["type_hierarchy"]}}</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}
