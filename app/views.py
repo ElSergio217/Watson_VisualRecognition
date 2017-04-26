@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/vr', methods=['GET', 'POST'])
 def index():
 	if request.method == 'POST':
 		instance = vr(api_key='ea063a17f1589193f1f83656d6608806eee905d0', version='2016-05-20') # API credentials
